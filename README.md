@@ -7,7 +7,7 @@ Extension method for using Moq with Microsoft.Extensions.Logger
 Forked from https://github.com/WestDiscGolf/Random/tree/master/LoggerUnitTests
 
 [Original Blog Post](https://adamstorr.azurewebsites.net/blog/mocking-ilogger-with-moq)
-
+ [Tracking packe request](https://github.com/WestDiscGolf/Random/issues/2)
 
 ## Installing KeyValueRepo
 
