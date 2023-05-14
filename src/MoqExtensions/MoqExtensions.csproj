@@ -16,7 +16,7 @@
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<Nullable>enable</Nullable>
 		<OutputType>Library</OutputType>
-		<AssemblyName>WestDiscGolf.MoqExtensions.dll</AssemblyName>
+		<AssemblyName>WestDiscGolf.MoqExtensions</AssemblyName>
 		<RootNamespace>WestDiscGolf.MoqExtensions</RootNamespace>
 	</PropertyGroup>
 
