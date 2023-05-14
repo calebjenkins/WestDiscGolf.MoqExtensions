@@ -12,8 +12,8 @@
 		<RepositoryType>git</RepositoryType>
 		<RepositoryUrl>https://github.com/calebjenkins/WestDiscGolf.MoqExtensions</RepositoryUrl>
 		<PackageTags>moq, Microsoft.Extensions, ILogger, xUnit</PackageTags>
-		<PackageLicenseFile>LICENSE</PackageLicenseFile>
-		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageLicenseFile>../../LICENSE</PackageLicenseFile>
+		<PackageReadmeFile>../../README.md</PackageReadmeFile>
 		<Nullable>enable</Nullable>
 		<OutputType>Library</OutputType>
 		<AssemblyName>WestDiscGolf.MoqExtensions.dll</AssemblyName>
