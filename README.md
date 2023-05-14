@@ -3,7 +3,7 @@
 [![.github/workflows/ci-main-deploy.yml](https://github.com/calebjenkins/WestDiscGolf.MoqExtensions/actions/workflows/ci-main-deploy.yml/badge.svg)](https://github.com/calebjenkins/WestDiscGolf.MoqExtensions/actions/workflows/ci-main-deploy.yml)
 [![.github/workflows/ci-dev.yml](https://github.com/calebjenkins/WestDiscGolf.MoqExtensions/actions/workflows/ci-dev.yml/badge.svg)](https://github.com/calebjenkins/WestDiscGolf.MoqExtensions/actions/workflows/ci-dev.yml)
 
-Extension method for using Moq with Microsoft.Extensions.Logger
+Extension method for using [Moq](https://github.com/moq) with [Microsoft.Extensions.Logging](https://learn.microsoft.com/en-us/dotnet/api/microsoft.extensions.logging?view=dotnet-plat-ext-7.0)
 
 
 Forked from https://github.com/WestDiscGolf/Random/tree/master/LoggerUnitTests
@@ -13,7 +13,7 @@ Forked from https://github.com/WestDiscGolf/Random/tree/master/LoggerUnitTests
 
 ## Installing KeyValueRepo
 
-You should install [Extensions with NuGet](https://www.nuget.org/packages/Calebs.KeyValueRepo):
+You should install [MoqExtensions with NuGet](https://www.nuget.org/packages/WestDiscGolf.MoqExtensions):
 
     Install-Package WestDiscGolf.MoqExtensions
     
