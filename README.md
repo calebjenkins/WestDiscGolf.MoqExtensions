@@ -1,4 +1,4 @@
-# MoqExtensions
+ MoqExtensions
 [![.github/workflows/ci.yml](https://github.com/calebjenkins/WestDiscGolf.MoqExtensions/actions/workflows/ci.yml/badge.svg)](https://github.com/calebjenkins/WestDiscGolf.MoqExtensions/actions/workflows/ci.yml)
 
 Extension method for using Moq with Microsoft.Extensions.Logger
