@@ -8,12 +8,14 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{66484C9D-E640-476A-BED6-55A7755F476F}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
+		.github\workflows\ci-dev.yml = .github\workflows\ci-dev.yml
+		.github\workflows\ci-main-deploy.yml = .github\workflows\ci-main-deploy.yml
 		.github\workflows\ci.yml = .github\workflows\ci.yml
 		LICENSE = LICENSE
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoqExtensionsTests", "src\MoqExtensionsTests\MoqExtensionsTests.csproj", "{748C0E64-2870-4932-B419-B981715A8A61}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoqExtensionsTests", "src\MoqExtensionsTests\MoqExtensionsTests.csproj", "{748C0E64-2870-4932-B419-B981715A8A61}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

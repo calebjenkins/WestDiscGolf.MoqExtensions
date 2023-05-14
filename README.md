@@ -7,7 +7,7 @@ Extension method for using Moq with Microsoft.Extensions.Logger
 Forked from https://github.com/WestDiscGolf/Random/tree/master/LoggerUnitTests
 
 [Original Blog Post](https://adamstorr.azurewebsites.net/blog/mocking-ilogger-with-moq)
- [Tracking packe request](https://github.com/WestDiscGolf/Random/issues/2)
+   |   [Tracking package request](https://github.com/WestDiscGolf/Random/issues/2)
 
 ## Installing KeyValueRepo
 
@@ -29,4 +29,5 @@ Either command, from Package Manager Console or .NET Core CLI, will download and
 ## Versioning
 The package `version` is defined in the `MoqExtensions.csproj` file, using .NET SDK style structure. We follow `semantic versioning` for this package.
 
-
+## Usage
+Use these extensions when working with `Moq` and `Microsoft.Extensions.Logging.ILogger<>` since Microsoft's implementation of the `ILogger` mostly relies on extension methods, and not on methods defined in the actual `ILogger` interface. This extension method takes a "mock around" approach - to get around the ILogger extension methods and to assert against what they are doing beneath the abstractions.

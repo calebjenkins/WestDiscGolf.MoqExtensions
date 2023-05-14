@@ -1,0 +1,79 @@
+on:
+    push:
+        branches:
+            - 'main'
+        paths-ignore:
+            - '**.md'
+    workflow_dispatch:
+
+jobs:
+    build:
+      runs-on: ubuntu-latest
+      timeout-minutes: 15
+  
+      steps:
+          - name: Checkout
+            uses: actions/checkout@v3
+            with:
+                fetch-depth: 0
+          
+          - name: Setup .NET
+            uses: actions/setup-dotnet@v3
+            with:
+                dotnet-version: '7.0.x'
+  
+          - name: Package Restore
+            run: dotnet restore
+  
+          - name: Build
+            run: dotnet build --configuration Release
+  
+          - name: Test
+            run: dotnet test --configuration Release --no-build --filter 'FullyQualifiedName!~BDD_Specs'
+
+          - name: Echo Branch Name
+            run: echo "Branch name is $GITHUB_REF_NAME "
+
+          - name: Get version
+            id: get_version
+            uses: greenygh0st/net-proj-release-version@v1
+            with:
+                PROJ_FILE: src/MoqExtensions/MoqExtensions.csproj
+            
+          - name: Show Release Version
+            run: echo "Release Version is ${{steps.get_version.outputs.RELEASE_VERSION}}"
+
+          - name: Set Release Version
+            run: echo "getting version"
+        
+            env:
+                RELEASE_VERSION: steps.get_version.outputs.RELEASE_VERSION
+
+
+          - name: Print new build number
+            run: echo "Build number is $GITHUB_RUN_NUMBER "
+   
+
+          - name: Detect if workflow is running on origin/Main
+            id: detect_main
+            run: git rev-parse HEAD | grep $(git rev-parse origin/main)
+            continue-on-error: true
+
+
+          - name: Verify is based on origin/Main to ensure PRs are correctly targeted
+            run: git log origin/main..HEAD | grep $(git rev-parse --short HEAD)
+            if: ${{ steps.detect_main.outcome == 'failure' }}
+
+          - name: Pack
+            run: dotnet pack --configuration Release /p:Version=${{steps.get_version.outputs.RELEASE_VERSION}}-ci-${GITHUB_RUN_NUMBER} --include-symbols  --output .
+            if: ${{ steps.detect_main.outcome == 'success' }}
+
+
+          - name: Push to Nuget
+            if: ${{ steps.detect_main.outcome == 'success' }}
+            # if: ${{ github.ref == 'refs/heads/main' }}
+            # run: dotnet nuget push WestDiscGolf.MoqExtensions.${{steps.get_version.outputs.RELEASE_VERSION}}.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{secrets.NUGET_KEY}}
+            run: echo "feux-push to nuget"
+
+
+ 
