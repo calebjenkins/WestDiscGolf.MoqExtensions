@@ -93,7 +93,7 @@ jobs:
             # if: ${{ steps.detect_develop.outcome == 'success' }}
             if: ${{ github.ref == 'refs/heads/develop' }}
             # run: dotnet nuget push *.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{secrets.FAKEAUTH_NUGET_KEY}}
-            # run: dotnet nuget push WestDiscGolf.MoqExtensions.${{steps.get_version.outputs.RELEASE_VERSION}}-ci-${GITHUB_RUN_NUMBER}.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{secrets.NUGET_KEY}}
-            run: echo "feux-push to nuget"
+            run: dotnet nuget push WestDiscGolf.MoqExtensions.${{steps.get_version.outputs.RELEASE_VERSION}}-ci-${GITHUB_RUN_NUMBER}.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{secrets.NUGET_KEY}}
+            # run: echo "feux-push to nuget"
 
  
