@@ -20,7 +20,7 @@ jobs:
           - name: Setup .NET
             uses: actions/setup-dotnet@v3
             with:
-                dotnet-version: '7.0.x'
+                dotnet-version: '6.0.x'
   
           - name: Package Restore
             run: dotnet restore
@@ -36,7 +36,7 @@ jobs:
 
           - name: Get version
             id: get_version
-            uses: greenygh0st/net-proj-release-version@v1
+            uses: greenygh0st/net-proj-release-version@v2
             with:
                 PROJ_FILE: src/MoqExtensions/MoqExtensions.csproj
             
@@ -72,8 +72,8 @@ jobs:
           - name: Push to Nuget
             if: ${{ steps.detect_main.outcome == 'success' }}
             # if: ${{ github.ref == 'refs/heads/main' }}
-            # run: dotnet nuget push WestDiscGolf.MoqExtensions.${{steps.get_version.outputs.RELEASE_VERSION}}.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{secrets.NUGET_KEY}}
-            run: echo "feux-push to nuget"
+            run: dotnet nuget push WestDiscGolf.MoqExtensions.${{steps.get_version.outputs.RELEASE_VERSION}}.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{secrets.NUGET_KEY}}
+            # run: echo "feux-push to nuget"
 
 
  

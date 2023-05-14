@@ -8,7 +8,7 @@ public static class LoggerTestExtensions
 {
     public static Mock<ILogger<T>> VerifyDebugWasCalled<T>(this Mock<ILogger<T>> logger, string expectedMessage)
     {
-        Func<object, Type, bool> state = (v, t) => v.ToString().CompareTo(expectedMessage) == 0;
+        Func<object, Type, bool> state = (v, t) => v.ToString()?.CompareTo(expectedMessage) == 0;
         
         logger.Verify(
             x => x.Log(
@@ -38,7 +38,7 @@ public static class LoggerTestExtensions
     {
         times ??= Times.Once();
 
-        Func<object, Type, bool> state = (v, t) => v.ToString().CompareTo(expectedMessage) == 0;
+        Func<object, Type, bool> state = (v, t) => v.ToString()?.CompareTo(expectedMessage) == 0;
 
         logger.Verify(
             x => x.Log(
