@@ -54,7 +54,7 @@ jobs:
             run: echo "Build number is $GITHUB_RUN_NUMBER "
    
 
-          - name: Detect if workflow is running on origin/Main
+          - name: Detect if workflow is running on origin/main
             id: detect_main
             run: git rev-parse HEAD | grep $(git rev-parse origin/main)
             continue-on-error: true
@@ -65,7 +65,7 @@ jobs:
             if: ${{ steps.detect_main.outcome == 'failure' }}
 
           - name: Pack
-            run: dotnet pack --configuration Release /p:Version=${{steps.get_version.outputs.RELEASE_VERSION}}-ci-${GITHUB_RUN_NUMBER} --include-symbols  --output .
+            run: dotnet pack --configuration Release /p:Version=${{steps.get_version.outputs.RELEASE_VERSION}} --include-symbols  --output .
             if: ${{ steps.detect_main.outcome == 'success' }}
 
 
