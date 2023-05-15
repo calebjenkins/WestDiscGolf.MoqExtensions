@@ -1,7 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
+	
 	<PropertyGroup>
-		<TargetFramework>net6</TargetFramework>
+		<TargetFrameworks>net6.0;net7.0</TargetFrameworks>
+		<Configurations>Debug;Release;NET7</Configurations>
 		<IsPackable>true</IsPackable>
 		<Version>1.0.1</Version>
 		<GeneratePackageOnBuild>False</GeneratePackageOnBuild>
