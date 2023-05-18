@@ -8,8 +8,8 @@ Extension method for using [Moq](https://github.com/moq) with [Microsoft.Extensi
 
 Forked from https://github.com/WestDiscGolf/Random/tree/master/LoggerUnitTests
 
-[Original Blog Post](https://adamstorr.azurewebsites.net/blog/mocking-ilogger-with-moq)
-   |   [Tracking package request](https://github.com/WestDiscGolf/Random/issues/2)
+[Original Blog Post](https://www.adamstorr.co.uk/blog/mocking-ilogger-with-moq)
+   |   [Package request](https://github.com/WestDiscGolf/Random/issues/2)
 
 ## Installing KeyValueRepo
 
@@ -86,3 +86,8 @@ More examples in [LoggerTest.cs](https://github.com/calebjenkins/WestDiscGolf.Mo
 ```
 
 More examples in [LoggerTest.cs](https://github.com/calebjenkins/WestDiscGolf.MoqExtensions/blob/main/src/MoqExtensionsTests/LoggerTest.cs)
+
+## Change Log
+- 1.0.2 - readme and links updated to correct blog page
+- 1.0.1 - added .NET 7
+- 1.0.0 - ininitial release

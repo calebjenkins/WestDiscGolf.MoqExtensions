@@ -4,11 +4,11 @@
 		<TargetFrameworks>net6.0;net7.0</TargetFrameworks>
 		<Configurations>Debug;Release;NET7</Configurations>
 		<IsPackable>true</IsPackable>
-		<Version>1.0.1</Version>
+		<Version>1.0.2</Version>
 		<GeneratePackageOnBuild>False</GeneratePackageOnBuild>
 		<Title>WestDiscGolf.MoqExtensions</Title>
 		<Description>An extension method for Moq that makes mocking Microsoft Logger much easier</Description>
-		<PackageProjectUrl>https://adamstorr.azurewebsites.net/blog/mocking-ilogger-with-moq</PackageProjectUrl>
+		<PackageProjectUrl>https://www.adamstorr.co.uk/blog/mocking-ilogger-with-moq</PackageProjectUrl>
 		<Copyright>Adam Storr</Copyright>
 		<RepositoryType>git</RepositoryType>
 		<RepositoryUrl>https://github.com/calebjenkins/WestDiscGolf.MoqExtensions</RepositoryUrl>
